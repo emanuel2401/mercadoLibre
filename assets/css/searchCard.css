@@ -5,31 +5,51 @@
 .post-card{
     background-color: #ffffff;
 }
-.post-card a{
+.post-card .product{
     display: flex;
     justify-content: space-between;
     padding-bottom:var(--first-padding)
 }
-.post-card a .details{
+.post-card .product .details{
     display: flex;
     align-items: center;
 }
-.post-card a .direction{
-    padding: 5vh 10vw 0 0;
+.post-card .product .direction{
+    padding-right: 10vw;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.post-card a .details span{
+.post-card .product .direction a{
+    background-color: var(--color-button);
+    color: var(--color-background);
+    padding:10px 20px;
+    font-weight: bold;
+    margin-top: var(--second-padding);
+}
+.post-card .product .details span{
     font-weight: bold;
     font-size: 24px;
 }
-.post-card a .details p{
+.post-card .product .details p{
     font-size: 18px;
     padding-top: var( --first-padding);
     width: 90%;
 }
-.post-card a .details .product-img img{
+.post-card .product .details .product-img img{
     width: 180px;
     height: 180px;
     border-radius: 4px;
     padding: var(--second-padding);
+}
+
+@media screen and  (max-width: 768px){
+    .post-card .product{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .post-card .product .direction{
+        padding-left: var(--first-padding);
+    }
 }

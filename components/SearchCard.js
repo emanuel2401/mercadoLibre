@@ -2,8 +2,8 @@ window.description = "";
 export function SearchCard(props) {
   let { id, title, price, address, thumbnail } = props;
 
-  function click() {
-    fetch(
+  async function click() {
+    await fetch(
       `https://api.mercadolibre.com/items/${localStorage.getItem(
         "mlPostId"
       )}/description`
@@ -21,19 +21,20 @@ export function SearchCard(props) {
   });
 
   return `
-    <article class="post-card" data-id="${id}">
-    <a href='#detalle/${id}'  data-id="${id}">
-    <div class='details' data-id="${id}">
-      <div class='product-img' data-id="${id}"><img src="${thumbnail}" alt="" /></div>
-      <div data-id="${id}">
-        <span data-id="${id}">$ ${price}</span>
-        <p data-id="${id}">${title}</p>
+    <article class="post-card">
+    <div class="product">
+    <div class='details'>
+      <div class='product-img'><img src="${thumbnail}"  alt="producto"/></div>
+      <div>
+        <span>$ ${price}</span>
+        <p>${title}</p>
        </div>
     </div>
-    <div data-id="${id}" class='direction'>
+    <div class='direction'>
        <address>${address.state_name}</address>
+       <a href='#detalle/${id}'  data-id="${id}">Ver producto</a>
      </div>
-     </a>
+     </div>
     </article>
     `;
 }
