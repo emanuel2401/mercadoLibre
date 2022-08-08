@@ -1,0 +1,70 @@
+.post-page{
+    background-color: #ffffff;
+}
+.post-page .product{
+    display: flex;
+    justify-content: space-between;
+}
+.post-page .product img{
+    width: 680px;
+    height: auto;
+}
+.post-page .product .details{
+    padding:var(--first-padding) var(--first-padding) 0 var(--first-padding);
+    display: flex;
+    flex-direction: column;
+}
+.post-page .product .details .sold{
+    font-size: 14px;
+    color: var(--color-three-text);
+}
+.post-page .product .details p{
+    font-size: 24px;
+    color: var(--color-text);
+    font-weight: bold;
+    width: 80%;
+    padding: var(--second-padding) 0 var( --first-padding) 0;
+}
+.post-page .product .details .price{
+    font-size: 46px;
+    color: var(--color-text);
+    padding-bottom: var( --first-padding);
+}
+.post-page .product .details button{
+    width: 50%;
+    background-color: var(--color-button);
+    color: var(--color-background);
+    padding: 10px 0;
+}
+.post-page .description {
+    padding-left: var( --first-padding);
+}
+.post-page .description h4{
+    font-size: 28px;
+    font-weight: 500;
+    padding-bottom: var( --first-padding);
+}
+.post-page .description p{
+    padding-bottom: var( --first-padding);
+    font-size: 16px;
+    color: var(--color-second-text);
+    width: 70%;
+}
+
+@media screen and  (max-width: 768px){
+    .post-page .product{
+        flex-direction: column;
+    }
+    .post-page .product img{
+        width: 100%;
+    }
+    .post-page .description p{
+        width: 90%;
+    }
+    .post-page .product .details{
+        padding-left: var(--first-padding);
+    }
+    .post-page .product .details button{
+        margin-bottom: var(--first-padding);
+    }
+}

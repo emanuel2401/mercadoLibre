@@ -1,0 +1,10 @@
+:root{
+    --color-nav: #ffe600;
+    --color-text:#333333;
+    --color-second-text:#999999;
+    --color-three-text:#666666;
+    --color-background:#eeeeee;
+    --color-button:#3483fa;
+    --first-padding:32px;
+    --second-padding:16px;
+}

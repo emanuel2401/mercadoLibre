@@ -1,0 +1,35 @@
+#main{
+    margin-top: var(--second-padding);
+    margin-bottom: var( --first-padding);
+}
+.post-card{
+    background-color: #ffffff;
+}
+.post-card a{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:var(--first-padding)
+}
+.post-card a .details{
+    display: flex;
+    align-items: center;
+}
+.post-card a .direction{
+    padding: 5vh 10vw 0 0;
+    font-size: 12px;
+}
+.post-card a .details span{
+    font-weight: bold;
+    font-size: 24px;
+}
+.post-card a .details p{
+    font-size: 18px;
+    padding-top: var( --first-padding);
+    width: 90%;
+}
+.post-card a .details .product-img img{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    padding: var(--second-padding);
+}
